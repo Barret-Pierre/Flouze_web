@@ -32,6 +32,7 @@
   <!-- Custom styles for this template -->
   <link href="../css/product.css" rel="stylesheet">
   <link rel="stylesheet" href="../scss/styledeux.css">
+  <link rel="stylesheet" href="../css/presentation.css">
 
 </head>
 
@@ -206,10 +207,10 @@
     <!----------------------- Graph ----------------------->
 
     <div class="container" id="graph">
-      <div class="container" id="donutBlock" style="display: none;">
+      <div class="container" id="donutBlock" style="display: none; width: 80%;">
         <canvas id="donuts"></canvas>
       </div>
-      <div id="optimiserBlock" style="display: none;">
+      <div id="optimiserBlock" style="display: none; width: 80%;">
         <a href="#optimiser">
           <div class="buttons">
             <button class="blob-btn" href="#optimiser" id="optimiser">
@@ -238,9 +239,62 @@
     <!----------------------- Graph ----------------------->
 
     <!----------------------- Section Offres ----------------------->
-    <section id="offres">
+    <!------------------------------------------------------------------------HTML de la présentation du site------------------------------------------>
 
+    <section class="scroll-container">
+      <div class="scroll-element js-scroll fade-in">
+
+      </div>
+      <div class="scroll-caption">
+        <h1 class="avantagegros">Catégorisation
+          des dépenses</h1>
+        <h2 class="avantagepetit">Vos dépenses sont catégorisées automatiquement : découvrez combien vous dépensez en
+          courses, transport, restaurants... Plus besoin de faire ses comptes 😎.</h2>
+      </div>
     </section>
+    <section class="scroll-container">
+      <div class="scroll-element js-scroll fade-in-bottom">
+
+      </div>
+      <div class="scroll-caption">
+        <h1 class="avantagegros">Prévision du solde de fin du mois</h1>
+        <h2 class="avantagepetit">Le Budget vous aide à savoir où vous en êtes de vos dépenses et prévoit combien il
+          vous restera à la fin du mois 💰.</h2>
+      </div>
+    </section>
+    <section class="scroll-container">
+      <div class="scroll-element js-scroll slide-left">
+
+      </div>
+      <div class="scroll-caption">
+        <h1 class="avantagegros">Faire des virements</h1>
+        <h2 class="avantagepetit">En quelques clics, vous pouvez faire des virements entre vos comptes ou vers des
+          comptes tiers (disponible pour 10 banques actuellement) 🚀.</h2>
+      </div>
+    </section>
+    <section class="scroll-container">
+      <div class="scroll-element js-scroll slide-right">
+
+      </div>
+      <div class="scroll-caption">
+        <h1 class="avantagegros">Vos opportunités</h1>
+        <h2 class="avantagepetit">Grâce à nos algorithmes intelligents et de notre équipe de Coachs, découvrez des
+          Opportunités uniques pour économiser.</h2>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!---------------------------------------------------------------------Fin du HTML de la présentation du site------------------------------------------------->
     <!----------------------- Section Offres ----------------------->
 
 
@@ -270,52 +324,47 @@
     <footer class="container py-5 position-relative">
       <div class="row">
         <div class="col-12 col-md">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
-            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img"
-            viewBox="0 0 24 24">
-            <title>Product</title>
-            <circle cx="12" cy="12" r="10" />
-            <path
-              d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" />
-          </svg>
+
           <small class="d-block mb-3 text-muted">&copy; 2002–2021</small>
+          <small class="d-block mb-3 text-muted">&copy; Site réalisé par Pierre B, Youcef H, Nicolas B et Victor
+            A.</small>
         </div>
         <div class="col-6 col-md">
-          <h5>Features</h5>
+          <h5>Pierre B.</h5>
           <ul class="list-unstyled text-small">
-            <li><a class="link-secondary" href="#">Cool stuff</a></li>
-            <li><a class="link-secondary" href="#">Random feature</a></li>
-            <li><a class="link-secondary" href="#">Team feature</a></li>
-            <li><a class="link-secondary" href="#">Stuff for developers</a></li>
-            <li><a class="link-secondary" href="#">Another one</a></li>
-            <li><a class="link-secondary" href="#">Last time</a></li>
+            <li><a class="link-secondary"
+                href="https://www.linkedin.com/in/pierre-alexandre-barret-1a99171b0/">Linkedin</a></li>
+            <li><a class="link-secondary" href="https://github.com/Barret-Pierre">Github</a></li>
+
+          </ul>
+        </div>
+
+        <div class="col-6 col-md">
+          <h5>Youcef H.</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="link-secondary" href="https://www.linkedin.com/in/youcef-haouas-b18495225/">Linkedin</a></li>
+            <li><a class="link-secondary" href="https://github.com/HaouasYoucef">Github</a></li>
+
+
           </ul>
         </div>
         <div class="col-6 col-md">
-          <h5>Resources</h5>
+          <h5>Nicolas B.</h5>
           <ul class="list-unstyled text-small">
-            <li><a class="link-secondary" href="#">Resource name</a></li>
-            <li><a class="link-secondary" href="#">Resource</a></li>
-            <li><a class="link-secondary" href="#">Another resource</a></li>
-            <li><a class="link-secondary" href="#">Final resource</a></li>
+            <li><a class="link-secondary" href="https://www.linkedin.com/in/nicolas-bellemont-5194651ba/">Linkedin</a>
+            </li>
+            <li><a class="link-secondary" href="https://github.com/bellemont">Github</a></li>
+
+
           </ul>
         </div>
         <div class="col-6 col-md">
-          <h5>Resources</h5>
+          <h5>Victor A.</h5>
           <ul class="list-unstyled text-small">
-            <li><a class="link-secondary" href="#">Business</a></li>
-            <li><a class="link-secondary" href="#">Education</a></li>
-            <li><a class="link-secondary" href="#">Government</a></li>
-            <li><a class="link-secondary" href="#">Gaming</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md">
-          <h5>About</h5>
-          <ul class="list-unstyled text-small">
-            <li><a class="link-secondary" href="#">Team</a></li>
-            <li><a class="link-secondary" href="#">Locations</a></li>
-            <li><a class="link-secondary" href="#">Privacy</a></li>
-            <li><a class="link-secondary" href="#">Terms</a></li>
+            <li><a class="link-secondary" href="https://www.linkedin.com/in/victoraldebert/">Linkedin</a></li>
+            <li><a class="link-secondary" href="https://github.com/victoraldebert">Github</a></li>
+
+
           </ul>
         </div>
       </div>
@@ -331,7 +380,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"></script>
-    <!-- Notre JS -->
+    <!-- Nos JS -->
+    <script src="../js/presentation.js"></script>
     <script src="../js/index.js"></script>
   </main>
 </body>
