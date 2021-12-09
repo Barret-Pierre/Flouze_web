@@ -70,7 +70,7 @@
 
     <!----------------------- Carousel ----------------------->
 
-    <div id="myCarousel" class="carousel slide" data-bs-interval="false" data-bs-ride="carousel">
+    <div id="myCarousel" class="carousel slide mb-3" data-bs-interval="false" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <div data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"
           class="bi bi-circle"></div>
@@ -152,9 +152,9 @@
           <div class="container-item text-center">
             <h1>Verifier votre budget</h1>
             <p>Bien joué, vous êtes arrivé jusqu'au bout cliquez ci dessous pour analayser votre budget</p>
-            <a href="#">
+            <a href="#donuts">
               <div class="buttons">
-                <button class="blob-btn" href="#" id="analyser">
+                <button class="blob-btn" href="#donuts" id="analyser">
                   Analyser
                   <span class="blob-btn__inner">
                     <span class="blob-btn__blobs">
@@ -203,6 +203,40 @@
 
     <!----------------------- Carousel ----------------------->
 
+    <!----------------------- Graph ----------------------->
+
+    <div class="container" id="graph">
+      <div class="container" id="donutBlock" style="display: none;">
+        <canvas id="donuts"></canvas>
+      </div>
+      <div id="optimiserBlock" style="display: none;">
+        <a href="#optimiser">
+          <div class="buttons">
+            <button class="blob-btn" href="#optimiser" id="optimiser">
+              Optimiser
+              <span class="blob-btn__inner">
+                <span class="blob-btn__blobs">
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                </span>
+              </span>
+            </button>
+            <br />
+          </div>
+        </a>
+      </div>
+      <div>
+        <div id="message"></div>
+        <div class="container" id="histogramBlock" style="display: none;">
+          <canvas id="histogram"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!----------------------- Graph ----------------------->
+
     <!----------------------- Section Offres ----------------------->
     <section id="offres">
 
@@ -226,18 +260,8 @@
           </span>
         </button>
         <br />
+      </div>
     </a>
-
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-      <defs>
-        <filter id="goo">
-          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
-          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo">
-          </feColorMatrix>
-          <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
-        </filter>
-      </defs>
-    </svg>
 
     <!-----------------------Animation boutton----------------------->
 
@@ -299,9 +323,15 @@
 
     <!--Fin du Footer-->
 
+    <!-- Chart Js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js"
+      integrity="sha512-tMabqarPtykgDtdtSqCL3uLVM0gS1ZkUAVhRFu1vSEFgvB73niFQWJuvviDyBGBH22Lcau4rHB5p2K2T0Xvr6Q=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Bootstrap Js-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"></script>
+    <!-- Notre JS -->
     <script src="../js/index.js"></script>
   </main>
 </body>
