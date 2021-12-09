@@ -111,10 +111,8 @@
 
 }
 
-.round{
-  width: 15px;
-  border-radius: 7.5px;
-  border: #000000 1px solid;
+.form-control{
+  border-radius: 20px;
 }
 
 

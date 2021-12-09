@@ -5,6 +5,7 @@ const inputSlide = document.querySelectorAll(".container-item>input");
 let arrayClient = [];
 let salaire = 0;
 let economie;
+let arrayDepense = [];
 
 //rentrée
 
@@ -69,9 +70,11 @@ function verifSalaire() {
             salaire = parseInt(input.value, 10);
         } else {
             somme += parseInt(input.value, 10);
+            arrayDepense.push(parseInt(input.value, 10));
         }
     }
     economie = salaire - somme;
+    arrayDepense.push(economie);
     console.log(economie);
     if(Math.sign(economie) == -1){
         return false;
