@@ -50,17 +50,18 @@ let elecGaz = {
     name: elec_gaz.id,
     price: 71
 }
-let courAli = {
-    name: course.id,
-    price: 200
-}
-let loiDiv = {
-    name: loisir.id,
-    price: 55
-}
+// On pourra Rajouter plus tard un système de comparaison avec les course et les loisirs
+// let courAli = {
+//     name: course.id,
+//     price: 200
+// }
+// let loiDiv = {
+//     name: loisir.id,
+//     price: 55
+// }
 
 // constante tableau regroupant l'ensemble de nos offres
-let nosOffres = [assHab, telAb, assVoi, elecGaz, courAli, loiDiv];
+let nosOffres = [assHab, telAb, assVoi, elecGaz];
 
 
 // crée un tableau qui contient l'ensemble des inputs si tout les input sont rempli et si le salaire est suppérieur ou égale aux dépenses
@@ -142,10 +143,10 @@ function calculBenef() {
     }
 
     let benefPossibleAnnuel = benefPossibleMensuel * 12;
-    if(Math.sign(benefPossibleMensuel) >= 0) {
-        message.innerHTML = "Voici les bénnéf que vous pouvez faire si vous prennez nos offre " + benefPossibleMensuel + "€ et sur une année ça vous fera " + benefPossibleAnnuel + '€';
+    if (Math.sign(benefPossibleMensuel) >= 0) {
+        message.innerHTML = "Nous avons trouvé un certain nombres d'offres suscebtible de vous faire économiser " + benefPossibleMensuel + "€ par mois, cela équivaudrait à une économie de " + benefPossibleAnnuel + '€ à l\'année';
     } else {
-        message.innerHTML = "Vous bénéficiez de meilleurs offres que nous"
+        message.innerHTML = "Vous bénéficiez déjà des meilleurs offres"
 
     }
 };
@@ -188,20 +189,21 @@ function donuts() {
     var data = {
         labels: ["Loyer",
             "Electricité et gaz",
-            "assurance habitation",
+            "Assurance habitation",
             "Assurance voiture",
             "Course alimentaire",
             "Téléphone et internet",
-            "Loisirs et divertissement",
+            "Loisirs",
             "Ce qu'il vous reste",
         ],
         datasets: [
             {
-                backgroundColor: ['#333333',
+                backgroundColor: [
+                    '#333333',
+                    '#777777',
                     '#ebd28e',
                     '#FBE29D',
                     '#FAD775',
-                    '#777777',
                     '#F9CB4D',
                     '#F8C025',
                     '#9de1c2'],
@@ -209,13 +211,21 @@ function donuts() {
             },
         ]
     }
-    var option = {
-        responsive: true
-    }
     var config = {
         type: 'doughnut',
         data: data,
-        option: option,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'left',
+                    align: 'center',
+                    labels: {
+                        usePointStyle: "true"
+                    }
+                }
+            }
+        }
     }
     document.querySelector("#donutBlock").style.display = "block";
     donutChart = new Chart(canvasDonut, config)
@@ -251,35 +261,54 @@ function histogram() {
 
     var data = {
         labels: ["Assurance habitation",
-            "Téléphone et abonnement",
+            "Téléphone et internet",
             "Assurance voiture",
             "Electricité et gaz",
-            "Course alimentaire",
-            "Loisirs et divertissement"],
+            // "Course alimentaire",
+            // "Loisirs"
+        ],
         datasets: [
             {
                 label: 'Nos offres',
                 backgroundColor: '#9de1c2',
+                borderColor: '#9de1c2',
+                borderWidth: 2,
+                borderRadius: 5,
+                barThickness:20,
+                borderSkipped: false,
 
-                data: [15, 20, 37, 71, 200, 55]
+                data: [15, 20, 37, 71]
             },
 
             {
                 label: 'Vos offres',
                 backgroundColor: '#fbd97f',
+                borderColor: '#fbd97f',
+                borderWidth: 2,
+                borderRadius: 5,
+                borderSkipped: false,
+                barThickness:20,
                 data: priceOld
             }
         ]
     }
     var option = {
-        responsive: true
-
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top',
+                align: 'center',
+                labels: {
+                    usePointStyle: "true"
+                }
+            }
+        },
     }
 
     var config = {
         type: 'bar',
         data: data,
-        option: option,
+        options: option,
     }
     histogramChart = new Chart(canvasHistogram, config)
     histogramIs = true;
@@ -301,17 +330,27 @@ function hideOptimiserBlock() {
     optimiserBlock.style.display = "none";
 }
 
-// affiche le block optimisation
+// Affiche le block optimisation
 function showOptimiserBlock() {
     optimiserBlock.style.display = "block";
 }
 
+// Affiche le message
+function showMessage() {
+    message.style.display = "block";
+}
+
+// Cache le message
+function hideMessage() {
+    message.style.display = "none";
+}
 // ******************************************* Evènement *******************************************
 
 
 // Au click du boutton analyser
 proposer.addEventListener("click", (e) => {
     e.stopPropagation();
+    hideMessage()
     if (createTableauInput() == true) {
         deleteHistogram();
         deleteDonut();
@@ -329,8 +368,9 @@ proposer.addEventListener("click", (e) => {
 optimiser.addEventListener("click", (e) => {
     e.stopPropagation();
     deleteHistogram();
-    optimPriceOld(); 
+    optimPriceOld();
     calculBenef();
+    showMessage();
     showHistogram();
     histogram();
 });

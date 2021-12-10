@@ -30,13 +30,15 @@
   </style>
 
   <!-- Custom styles for this template -->
-  <link href="../css/product.css" rel="stylesheet">
   <link rel="stylesheet" href="../scss/styledeux.css">
   <link rel="stylesheet" href="../css/presentation.css">
+  <link href="../css/product.css" rel="stylesheet">
 
 </head>
 
 <body>
+
+  <!----------------------- Navigation ----------------------->
 
   <header class="site-header sticky-top py-1">
     <nav class="container d-flex flex-column flex-md-row justify-content-between">
@@ -51,169 +53,189 @@
         </svg>
       </a>
       <a class="py-2 d-none d-md-inline-block" href="#">Accueil</a>
-      <a class="py-2 d-none d-md-inline-block" href="#">Comparateur</a>
-      <a class="py-2 d-none d-md-inline-block" href="#">Nos Offres</a>
+      <a class="py-2 d-none d-md-inline-block" href="#carousel">Comparateur</a>
+      <a class="py-2 d-none d-md-inline-block" href="#sectionOffre">Que proposons-nous?</a>
     </nav>
   </header>
 
+  <!----------------------- Contenue ----------------------->
+
   <main>
-    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-0 text-center bg-light">
-      <div class="col-md-5 p-lg-5 mx-auto my-5">
-        <h1 class="display-4 fw-normal">Grâce à Tyché</h1>
-        <p class="lead fw-normal">gérer son budget devient un jeu d'enfant.</p>
-        <a class="btn btn-outline-secondary" href="#myCarousel">Découvrir</a>
+
+    <!----------------------- Acceuil ----------------------->
+
+    <div class="ecran position-relative overflow-hidden p-3 p-md-5 m-md-0 text-start">
+      <div class="col-md-5 p-lg-5 mx-auto my-5 text-sm-center">
+        <h1 class="text-slide-right avantagegros display-4 fw-normal" id="titreAcceuil">Gére ta thune !</h1>
+        <p class="text-slide-right avantagepetit lead fw-normal">Grâce à notre application, gérer son budget devient un jeu d'enfant.</p>
+        <a href="#carousel">
+          <div class="element-fade-in-bottom buttons">
+            <button class="blob-btn" href="#carousel">
+              Découvrir
+              <span class="blob-btn__inner">
+                <span class="blob-btn__blobs">
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                </span>
+              </span>
+            </button>
+            <br />
+          </div>
+        </a>
 
       </div>
-      <div class="product-device shadow-sm d-none d-md-block"></div>
-      <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+      <div class="product-device shadow-sm d-none d-lg-block"></div>
+      <div class="product-device product-device-2 shadow-sm d-none d-lg-block"></div>
     </div>
 
 
     <!----------------------- Carousel ----------------------->
 
-    <div id="myCarousel" class="carousel slide mb-3" data-bs-interval="false" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <div data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"
-          class="bi bi-circle"></div>
-        <div data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class="bi bi-circle"></div>
-        <div data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class="bi bi-circle"></div>
-        <div data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4" class="bi bi-circle"></div>
-        <div data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5" class="bi bi-circle"></div>
-        <div data-bs-target="#myCarousel" data-bs-slide-to="5" aria-label="Slide 6" class="bi bi-circle"></div>
-        <div data-bs-target="#myCarousel" data-bs-slide-to="6" aria-label="Slide 7" class="bi bi-circle"></div>
-        <div data-bs-target="#myCarousel" data-bs-slide-to="7" aria-label="Slide 8" class="bi bi-circle"></div>
-        <div data-bs-target="#myCarousel" data-bs-slide-to="8" aria-label="Slide 9" class="bi bi-circle"></div>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active" style="background-image: url('../assets/images/slide_4.png');">
-          <div class="container-item">
-            <h1>Salaire</h1>
-            <p>La somme de toute vos rentrée d'argent par mois</p>
-            <input type="number" class="form-control" placeholder="Le coût en €" aria-label="Recipient's username"
-              aria-describedby="button-addon2" id="salaire">
-          </div>
+    <section class="ecran" id="carousel">
+      <div id="myCarousel" class="carousel slide w-100" data-bs-interval="false" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <div data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"
+            class="bi bi-circle"></div>
+          <div data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class="bi bi-circle"></div>
+          <div data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class="bi bi-circle"></div>
+          <div data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4" class="bi bi-circle"></div>
+          <div data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5" class="bi bi-circle"></div>
+          <div data-bs-target="#myCarousel" data-bs-slide-to="5" aria-label="Slide 6" class="bi bi-circle"></div>
+          <div data-bs-target="#myCarousel" data-bs-slide-to="6" aria-label="Slide 7" class="bi bi-circle"></div>
+          <div data-bs-target="#myCarousel" data-bs-slide-to="7" aria-label="Slide 8" class="bi bi-circle"></div>
+          <div data-bs-target="#myCarousel" data-bs-slide-to="8" aria-label="Slide 9" class="bi bi-circle"></div>
         </div>
-        <div class="carousel-item" style="background-image: url('../assets/images/slide_1.png');">
-          <div class="container-item">
-            <h1>Loyer</h1>
-            <p>Indiquez ici le coût de votre loyer par mois</p>
-            <input type="number" class="form-control" placeholder="Le coût en €" aria-label="Recipient's username"
-              aria-describedby="button-addon2" id="loyer">
+        <div class="carousel-inner">
+          <div class="carousel-item active" style="background-image: url('../assets/images/slide_4.png');">
+            <div class="container-item">
+              <h1 class="avantagegros">Salaire</h1>
+              <p class="avantagepetit">La somme de toute vos rentrées d'argent par mois</p>
+              <input type="number" class="form-control" placeholder="Le coût en €" aria-label="Recipient's username"
+                aria-describedby="button-addon2" id="salaire">
+            </div>
           </div>
-        </div>
-        <div class="carousel-item" style="background-image: url('../assets/images/slide_2.png');">
-          <div class="container-item">
-            <h1>Assurance Habitation</h1>
-            <p>Indiquez ici le prix de votre assurance habiation par mois</p>
-            <input type="number" class="form-control" placeholder="Le coût en €" aria-label="Recipient's username"
-              aria-describedby="button-addon2" id="assurance_habitation">
+          <div class="carousel-item" style="background-image: url('../assets/images/slide_1.png');">
+            <div class="container-item">
+              <h1 class="avantagegros">Loyer</h1>
+              <p class="avantagepetit">Le coût de votre loyer par mois</p>
+              <input type="number" class="form-control" placeholder="Le coût en €" aria-label="Recipient's username"
+                aria-describedby="button-addon2" id="loyer">
+            </div>
           </div>
-        </div>
-        <div class="carousel-item" style="background-image: url('../assets/images/slide_3.png');">
-          <div class="container-item">
-            <h1>Assurance Auto</h1>
-            <p>Renseigner ici le prix de votre assurance auto par mois</p>
-            <input type="number" class="form-control" placeholder="Le coût en €" aria-label="Recipient's username"
-              aria-describedby="button-addon2" id="assurance_voiture">
+          <div class="carousel-item" style="background-image: url('../assets/images/slide_2.png');">
+            <div class="container-item">
+              <h1 class="avantagegros">Assurance Habitation</h1>
+              <p class="avantagepetit">Correspond au prix de votre assurance habiation par mois</p>
+              <input type="number" class="form-control" placeholder="Le coût en €" aria-label="Recipient's username"
+                aria-describedby="button-addon2" id="assurance_habitation">
+            </div>
           </div>
-        </div>
-        <div class="carousel-item" style="background-image: url('../assets/images/slide_4.png');">
-          <div class="container-item">
-            <h1>Electricité et Gaz</h1>
-            <p>Indiquez ici ce que vous dépensez en énergie par mois</p>
-            <input type="number" class="form-control" placeholder="Le coût en €" aria-label="Recipient's username"
-              aria-describedby="button-addon2" id="electricite_gaz">
+          <div class="carousel-item" style="background-image: url('../assets/images/slide_3.png');">
+            <div class="container-item">
+              <h1 class="avantagegros">Assurance Auto</h1>
+              <p class="avantagepetit" >Correspond au prix de votre assurance auto par mois</p>
+              <input type="number" class="form-control" placeholder="Le coût en €" aria-label="Recipient's username"
+                aria-describedby="button-addon2" id="assurance_voiture">
+            </div>
           </div>
-        </div>
-        <div class="carousel-item" style="background-image: url('../assets/images/slide_5.png');">
-          <div class="container-item">
-            <h1>Achat de nourriture</h1>
-            <p>Ce sont l'ensemble des dépenses liées au course et aux nécéssaire de vie</p>
-            <input type="number" class="form-control" placeholder="Le coût en €" aria-label="Recipient's username"
-              aria-describedby="button-addon2" id="course_alimentaire">
+          <div class="carousel-item" style="background-image: url('../assets/images/slide_4.png');">
+            <div class="container-item">
+              <h1 class="avantagegros">Electricité et Gaz</h1>
+              <p class="avantagepetit" >Coresspond à ce que vous dépensez en énergie par mois</p>
+              <input type="number" class="form-control" placeholder="Le coût en €" aria-label="Recipient's username"
+                aria-describedby="button-addon2" id="electricite_gaz">
+            </div>
           </div>
-        </div>
-        <div class="carousel-item" style="background-image: url('../assets/images/slide_6.png');">
-          <div class="container-item">
-            <h1>Téléphone et internet</h1>
-            <p>Correspond au coût de ton abonnement téléphonique et internet</p>
-            <input type="number" class="form-control" placeholder="Le coût en €" aria-label="Recipient's username"
-              aria-describedby="button-addon2" id="abonnement">
+          <div class="carousel-item" style="background-image: url('../assets/images/slide_5.png');">
+            <div class="container-item">
+              <h1 class="avantagegros">Achat de nourriture</h1>
+              <p class="avantagepetit" >Correspond à l'ensemble des dépenses liées au course et au nécéssaire de vie</p>
+              <input type="number" class="form-control" placeholder="Le coût en €" aria-label="Recipient's username"
+                aria-describedby="button-addon2" id="course_alimentaire">
+            </div>
           </div>
-        </div>
-        <div class="carousel-item" style="background-image: url('../assets/images/slide_6.png');">
-          <div class="container-item">
-            <h1>Loisir</h1>
-            <p>Correspond aux dépense de loisir récurente</p>
-            <input type="number" class="form-control" placeholder="Le coût en €" aria-label="Recipient's username"
-              aria-describedby="button-addon2" id="loisir">
+          <div class="carousel-item" style="background-image: url('../assets/images/slide_6.png');">
+            <div class="container-item">
+              <h1 class="avantagegros">Téléphone et internet</h1>
+              <p class="avantagepetit" >Correspond à votre abonnement téléphonique et internet</p>
+              <input type="number" class="form-control" placeholder="Le coût en €" aria-label="Recipient's username"
+                aria-describedby="button-addon2" id="abonnement">
+            </div>
           </div>
-        </div>
-        <div class="carousel-item" style="background-image: url('../assets/images/slide_6.png');">
-          <div class="container-item text-center">
-            <h1>Verifier votre budget</h1>
-            <p>Bien joué, vous êtes arrivé jusqu'au bout cliquez ci dessous pour analayser votre budget</p>
-            <a href="#donuts">
-              <div class="buttons">
-                <button class="blob-btn" href="#donuts" id="analyser">
-                  Analyser
-                  <span class="blob-btn__inner">
-                    <span class="blob-btn__blobs">
-                      <span class="blob-btn__blob"></span>
-                      <span class="blob-btn__blob"></span>
-                      <span class="blob-btn__blob"></span>
-                      <span class="blob-btn__blob"></span>
+          <div class="carousel-item" style="background-image: url('../assets/images/slide_3.png');">
+            <div class="container-item">
+              <h1 class="avantagegros">Loisir</h1>
+              <p class="avantagepetit" >Correspond aux dépenses de loisir(s) récurentes</p>
+              <input type="number" class="form-control" placeholder="Le coût en €" aria-label="Recipient's username"
+                aria-describedby="button-addon2" id="loisir">
+            </div>
+          </div>
+          <div class="carousel-item" style="background-image: url('../assets/images/slide_6.png');">
+            <div class="container-item text-center">
+              <h1 class="avantagegros">Verifiez votre budget</h1>
+              <p class="avantagepetit" >Bien joué, vous êtes arrivé jusqu'au bout, cliquez ci dessous pour analayser votre budget</p>
+              <a href="#donuts">
+                <div class="buttons">
+                  <button class="blob-btn" href="#donuts" id="analyser">
+                    Analyser
+                    <span class="blob-btn__inner">
+                      <span class="blob-btn__blobs">
+                        <span class="blob-btn__blob"></span>
+                        <span class="blob-btn__blob"></span>
+                        <span class="blob-btn__blob"></span>
+                        <span class="blob-btn__blob"></span>
+                      </span>
                     </span>
-                  </span>
-                </button>
-                <br />
-            </a>
-            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-              <defs>
-                <filter id="goo">
-                  <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
-                  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7"
-                    result="goo">
-                  </feColorMatrix>
-                  <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
-                </filter>
-              </defs>
-            </svg>
+                  </button>
+                  <br />
+                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <defs>
+                      <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7"
+                          result="goo">
+                        </feColorMatrix>
+                        <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+                      </filter>
+                    </defs>
+                  </svg>
+              </a>
+            </div>
           </div>
+
         </div>
-
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="rgb(51, 51, 51)"
+            class="bi bi-chevron-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+          </svg>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="rgb(51, 51, 51)"
+            class="bi bi-chevron-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+          </svg>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="rgb(51, 51, 51)" class="bi bi-chevron-left"
-          viewBox="0 0 16 16">
-          <path fill-rule="evenodd"
-            d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
-        </svg>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="rgb(51, 51, 51)"
-          class="bi bi-chevron-right" viewBox="0 0 16 16">
-          <path fill-rule="evenodd"
-            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-        </svg>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-    </div>
-
-    <!----------------------- Carousel ----------------------->
+      </div>
+    </section>
 
     <!----------------------- Graph ----------------------->
 
     <div class="container" id="graph">
-      <div class="container" id="donutBlock" style="display: none; width: 80%;">
+      <div class="container-graph container" id="donutBlock" style="display: none;">
         <canvas id="donuts"></canvas>
       </div>
-      <div id="optimiserBlock" style="display: none; width: 80%;">
+      <div id="optimiserBlock" style="display: none;">
         <a href="#optimiser">
-          <div class="buttons">
-            <button class="blob-btn" href="#optimiser" id="optimiser">
+          <div class="buttons mt-0">
+            <button class="blob-btn mb-5" href="#optimiser" id="optimiser">
               Optimiser
               <span class="blob-btn__inner">
                 <span class="blob-btn__blobs">
@@ -228,20 +250,18 @@
           </div>
         </a>
       </div>
-      <div>
-        <div id="message"></div>
-        <div class="container" id="histogramBlock" style="display: none;">
+      <div class="container">
+        <div id="message" style="display: none;"></div>
+        <div class="container-graph container mb-5" id="histogramBlock" style="display: none;">
           <canvas id="histogram"></canvas>
         </div>
       </div>
     </div>
 
-    <!----------------------- Graph ----------------------->
 
     <!----------------------- Section Offres ----------------------->
-    <!------------------------------------------------------------------------HTML de la présentation du site------------------------------------------>
 
-    <section class="scroll-container">
+    <section class="scroll-container" id="sectionOffre">
       <div class="scroll-element js-scroll fade-in">
 
       </div>
@@ -284,20 +304,6 @@
     </section>
 
 
-
-
-
-
-
-
-
-
-
-
-    <!---------------------------------------------------------------------Fin du HTML de la présentation du site------------------------------------------------->
-    <!----------------------- Section Offres ----------------------->
-
-
     <!-----------------------Animation boutton----------------------->
 
     <a href="#">
@@ -317,9 +323,8 @@
       </div>
     </a>
 
-    <!-----------------------Animation boutton----------------------->
 
-    <!--Début du Footer-->
+    <!----------------------- Début du Footer ----------------------->
 
     <footer class="container py-5 position-relative">
       <div class="row">
@@ -370,7 +375,6 @@
       </div>
     </footer>
 
-    <!--Fin du Footer-->
 
     <!-- Chart Js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js"

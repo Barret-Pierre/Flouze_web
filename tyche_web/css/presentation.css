@@ -121,6 +121,13 @@ header h2 {
     background-size: cover;
 }
 
+.text-slide-right {
+  animation: slide-in-right 1s ease-in-out both;
+}
+
+.element-fade-in-bottom {
+  animation: fade-in-bottom 1s ease-in-out both;
+}
 
 @keyframes slide-in-left {
   0% {
