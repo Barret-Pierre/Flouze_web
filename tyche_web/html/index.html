@@ -7,7 +7,8 @@
   <meta name="description" content="">
   <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
   <meta name="generator" content="Hugo 0.88.1">
-  <title>Tyché</title>
+  <link rel="shortcut icon" href="../assets/images/logo.png">
+  <title>Flouze</title>
 
   <!-- Bootstrap core CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -30,9 +31,9 @@
   </style>
 
   <!-- Custom styles for this template -->
-  <link rel="stylesheet" href="../scss/styledeux.css">
   <link rel="stylesheet" href="../css/presentation.css">
-  <link href="../css/product.css" rel="stylesheet">
+  <link rel="stylesheet" href="../scss/style.css">
+  <link rel="stylesheet" href="../css/product.css">
 
 </head>
 
@@ -42,15 +43,8 @@
 
   <header class="site-header sticky-top py-1">
     <nav class="container d-flex flex-column flex-md-row justify-content-between">
-      <a class="py-2" href="#" aria-label="Product">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
-          stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img"
-          viewBox="0 0 24 24">
-          <title>Product</title>
-          <circle cx="12" cy="12" r="10" />
-          <path
-            d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" />
-        </svg>
+      <a class="py-2" href="#">
+        <img src="../assets/images/logo.png" alt="Logo de l'application" height="24" width="24">
       </a>
       <a class="py-2 d-none d-md-inline-block" href="#">Accueil</a>
       <a class="py-2 d-none d-md-inline-block" href="#carousel">Comparateur</a>
@@ -66,8 +60,26 @@
 
     <div class="ecran position-relative overflow-hidden p-3 p-md-5 m-md-0 text-start">
       <div class="col-md-5 p-lg-5 mx-auto my-5 text-sm-center">
-        <h1 class="text-slide-right avantagegros display-4 fw-normal" id="titreAcceuil">Gére ta thune !</h1>
-        <p class="text-slide-right avantagepetit lead fw-normal">Grâce à notre application, gérer son budget devient un jeu d'enfant.</p>
+        <h1 class="avantagegros display-4 fw-normal" id="titreAcceuil">
+          Grâce à Flouze</h1>
+        <div class="container" style="height:100px;">
+          <div class="content">
+            <div class="content__container text-slide-right">
+              <p class="content__container__text">
+                Gère
+              </p>
+              <ul class="content__container__list">
+                <li class="content__container__list__item">ton argent !</li>
+                <li class="content__container__list__item">ton flouze !</li>
+                <li class="content__container__list__item">tes pesos !</li>
+                <li class="content__container__list__item">Gilles !</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- <h1 class="text-slide-right avantagegros display-4 fw-normal" id="titreAcceuil">Gére ta thune !</h1>
+        <p class="text-slide-right avantagepetit lead fw-normal">Grâce à notre application, gérer son budget devient un
+          jeu d'enfant.</p> -->
         <a href="#carousel">
           <div class="element-fade-in-bottom buttons">
             <button class="blob-btn" href="#carousel">
@@ -135,7 +147,7 @@
           <div class="carousel-item" style="background-image: url('../assets/images/slide_3.png');">
             <div class="container-item">
               <h1 class="avantagegros">Assurance Auto</h1>
-              <p class="avantagepetit" >Correspond au prix de votre assurance auto par mois</p>
+              <p class="avantagepetit">Correspond au prix de votre assurance auto par mois</p>
               <input type="number" class="form-control" placeholder="Le coût en €" aria-label="Recipient's username"
                 aria-describedby="button-addon2" id="assurance_voiture">
             </div>
@@ -143,7 +155,7 @@
           <div class="carousel-item" style="background-image: url('../assets/images/slide_4.png');">
             <div class="container-item">
               <h1 class="avantagegros">Electricité et Gaz</h1>
-              <p class="avantagepetit" >Coresspond à ce que vous dépensez en énergie par mois</p>
+              <p class="avantagepetit">Coresspond à ce que vous dépensez en énergie par mois</p>
               <input type="number" class="form-control" placeholder="Le coût en €" aria-label="Recipient's username"
                 aria-describedby="button-addon2" id="electricite_gaz">
             </div>
@@ -151,7 +163,7 @@
           <div class="carousel-item" style="background-image: url('../assets/images/slide_5.png');">
             <div class="container-item">
               <h1 class="avantagegros">Achat de nourriture</h1>
-              <p class="avantagepetit" >Correspond à l'ensemble des dépenses liées au course et au nécéssaire de vie</p>
+              <p class="avantagepetit">Correspond à l'ensemble des dépenses liées au course et au nécéssaire de vie</p>
               <input type="number" class="form-control" placeholder="Le coût en €" aria-label="Recipient's username"
                 aria-describedby="button-addon2" id="course_alimentaire">
             </div>
@@ -159,7 +171,7 @@
           <div class="carousel-item" style="background-image: url('../assets/images/slide_6.png');">
             <div class="container-item">
               <h1 class="avantagegros">Téléphone et internet</h1>
-              <p class="avantagepetit" >Correspond à votre abonnement téléphonique et internet</p>
+              <p class="avantagepetit">Correspond à votre abonnement téléphonique et internet</p>
               <input type="number" class="form-control" placeholder="Le coût en €" aria-label="Recipient's username"
                 aria-describedby="button-addon2" id="abonnement">
             </div>
@@ -167,7 +179,7 @@
           <div class="carousel-item" style="background-image: url('../assets/images/slide_3.png');">
             <div class="container-item">
               <h1 class="avantagegros">Loisir</h1>
-              <p class="avantagepetit" >Correspond aux dépenses de loisir(s) récurentes</p>
+              <p class="avantagepetit">Correspond aux dépenses de loisir(s) récurentes</p>
               <input type="number" class="form-control" placeholder="Le coût en €" aria-label="Recipient's username"
                 aria-describedby="button-addon2" id="loisir">
             </div>
@@ -175,7 +187,8 @@
           <div class="carousel-item" style="background-image: url('../assets/images/slide_6.png');">
             <div class="container-item text-center">
               <h1 class="avantagegros">Verifiez votre budget</h1>
-              <p class="avantagepetit" >Bien joué, vous êtes arrivé jusqu'au bout, cliquez ci dessous pour analayser votre budget</p>
+              <p class="avantagepetit">Bien joué, vous êtes arrivé jusqu'au bout, cliquez ci dessous pour analayser
+                votre budget</p>
               <a href="#donuts">
                 <div class="buttons">
                   <button class="blob-btn" href="#donuts" id="analyser">

@@ -1,0 +1,19 @@
+{
+  "name": "gestion-de-budget",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch scss/style.scss:scss/styledeux.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Barret-Pierre/tyche_web.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Barret-Pierre/tyche_web/issues"
+  },
+  "homepage": "https://github.com/Barret-Pierre/tyche_web#readme"
+}

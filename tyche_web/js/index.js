@@ -199,6 +199,15 @@ function donuts() {
         datasets: [
             {
                 backgroundColor: [
+                    "rgba(51, 51, 51, 0.5)",
+                    "rgba(119, 119, 119, 0.5)",
+                    "rgba(235, 210, 142, 0.5)",
+                    "rgba(251, 226, 157, 0.5)",
+                    "rgba(250, 215, 117, 0.5)",
+                    "rgba(249, 203, 77, 0.5)",
+                    "rgba(248, 192, 37, 0.5)",
+                    "rgba(157, 225, 194, 0.5)"],
+                borderColor: [
                     '#333333',
                     '#777777',
                     '#ebd28e',
@@ -207,6 +216,7 @@ function donuts() {
                     '#F9CB4D',
                     '#F8C025',
                     '#9de1c2'],
+                borderWidth: 2,
                 data: arrayDepenseEconomie
             },
         ]
@@ -222,6 +232,20 @@ function donuts() {
                     align: 'center',
                     labels: {
                         usePointStyle: "true"
+                    }
+                }
+            },
+            tooltips: {
+                callbacks: {
+                    label: function(tooltipItem, data) {
+                        var index = tooltipItem.index;
+                        var currentValue = data.datasets[tooltipItem.datasetIndex].data[index];
+                        var total = 0;
+                        data.datasets.forEach(function(el){
+                          total = total + el.data[index];
+                        });
+                        var percentage = parseFloat((currentValue/total*100).toFixed(1));
+                        return currentValue + ' (' + percentage + '%)';
                     }
                 }
             }
@@ -270,11 +294,11 @@ function histogram() {
         datasets: [
             {
                 label: 'Nos offres',
-                backgroundColor: '#9de1c2',
+                backgroundColor: "rgba(157, 225, 194, 0.5)",
                 borderColor: '#9de1c2',
                 borderWidth: 2,
                 borderRadius: 5,
-                barThickness:20,
+                barThickness: 20,
                 borderSkipped: false,
 
                 data: [15, 20, 37, 71]
@@ -282,12 +306,12 @@ function histogram() {
 
             {
                 label: 'Vos offres',
-                backgroundColor: '#fbd97f',
+                backgroundColor: "rgba(251, 217, 127, 0.5)",
                 borderColor: '#fbd97f',
                 borderWidth: 2,
                 borderRadius: 5,
                 borderSkipped: false,
-                barThickness:20,
+                barThickness: 20,
                 data: priceOld
             }
         ]
