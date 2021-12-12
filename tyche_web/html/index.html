@@ -42,14 +42,46 @@
   <!----------------------- Navigation ----------------------->
 
   <header class="site-header sticky-top py-1">
-    <nav class="container d-flex flex-column flex-md-row justify-content-between">
-      <a class="py-2" href="#">
-        <img src="../assets/images/logo.png" alt="Logo de l'application" height="24" width="24">
-      </a>
-      <a class="py-2 d-none d-md-inline-block" href="#">Accueil</a>
-      <a class="py-2 d-none d-md-inline-block" href="#carousel">Comparateur</a>
-      <a class="py-2 d-none d-md-inline-block" href="#sectionOffre">Que proposons-nous?</a>
+    <nav class="site-header navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="../assets/images/logo.png" alt="Logo de l'application" height="24" width="24">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#00213C" class="bi bi-list"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+          </svg>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="navigation nav-link active" aria-current="page" href="#">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="navigation nav-link" href="#carousel">Comparateur</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="navigation nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Qui sommes-nous?
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                <li><a class="dropdown-item" href="#sectionOffre">Nos offres</a></li>
+                <li><a class="dropdown-item" href="#footer">L'équipe</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <button class="btn-white btn btn-outline-success me-2" type="submit">Sign up</button>
+            <button class="btn-white btn btn-outline-success" type="submit">Sign in</button>
+          </form>
+        </div>
+      </div>
     </nav>
+
   </header>
 
   <!----------------------- Contenue ----------------------->
@@ -59,7 +91,7 @@
     <!----------------------- Acceuil ----------------------->
 
     <div class="ecran position-relative overflow-hidden p-3 p-md-5 m-md-0 text-start">
-      <div class="col-md-5 p-lg-5 mx-auto my-5 text-sm-center">
+      <div class="col-md-5 p-lg-5 mx-auto my-5 text-center">
         <h1 class="avantagegros display-4 fw-normal text-slide-right" id="titreAcceuil">
           Grâce à Flouze</h1>
 
@@ -80,21 +112,22 @@
         <!-- <h1 class="text-slide-right avantagegros display-4 fw-normal" id="titreAcceuil">Gére ta thune !</h1>
         <p class="text-slide-right avantagepetit lead fw-normal">Grâce à notre application, gérer son budget devient un
           jeu d'enfant.</p> -->
-
-        <div class="element-fade-in-bottom buttons">
-          <button class="blob-btn" href="#carousel">
-            Découvrir
-            <span class="blob-btn__inner">
-              <span class="blob-btn__blobs">
-                <span class="blob-btn__blob"></span>
-                <span class="blob-btn__blob"></span>
-                <span class="blob-btn__blob"></span>
-                <span class="blob-btn__blob"></span>
+        <a href="#carousel">
+          <div class="element-fade-in-bottom buttons">
+            <button class="blob-btn" href="#carousel">
+              Découvrir
+              <span class="blob-btn__inner">
+                <span class="blob-btn__blobs">
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                </span>
               </span>
-            </span>
-          </button>
-          <br />
-        </div>
+            </button>
+            <br />
+          </div>
+        </a>
 
 
       </div>
@@ -339,7 +372,7 @@
 
     <!----------------------- Début du Footer ----------------------->
 
-    <footer class="container py-5 position-relative">
+    <footer class="container py-5 position-relative" id="footer">
       <div class="row">
         <div class="col-12 col-md">
 

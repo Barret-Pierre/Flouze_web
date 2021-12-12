@@ -144,6 +144,8 @@ $borderW: 2px;
   
   &__container {
     // font-weight: 600;
+    margin: 0 auto;
+    width: fit-content;
     overflow: hidden;
     height: 50px;
     padding: 0 40px;
@@ -183,7 +185,8 @@ $borderW: 2px;
     }
 
     &__list {
-      margin-top: 0;
+      width: fit-content;
+      margin: 0;
       padding-left: 80px;
       text-align: left;
       list-style: none;
