@@ -1,10 +1,11 @@
 {
-  "name": "gestion-de-budget",
+  "name": "tyche_web",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch scss/style.scss:scss/styledeux.css"
+    "sass-dev": "sass --watch --update --style=expanded tyche_web/scss/style.scss:tyche_web/scss/style.css",
+    "sass-prod": "sass --no-source-map --style=compressed tyche_web/scss/style.scss:tyche_web/scss/style.css"
   },
   "repository": {
     "type": "git",
